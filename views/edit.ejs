@@ -22,11 +22,25 @@
                 <li class="todo-list-item">
                     <!-- This form will make a post request to server, sending item id in url -->
                     <form action="/todos/edit/<%= el._id %>" method="POST">
-                        <textarea id="editarea" rows="6" cols="45" name="todoItem"><%= el.todo %></textarea>
-                        
+                        <% if (el.todo.length >= 50) { %>
+                            <textarea id="editarea" rows="5" cols="45" name="todoItem"><%= el.todo %></textarea>
+                        <% } else { %>
+                            <input id="editarea" type="text" size="35" value="<%= el.todo %>" name="todoItem">
+                        <% } %>
+
                         <label class="" for="inputGroupSelect01">Priority</label>
                         <select name="priority" class="form-select" id="inputGroupSelect01">
-                            <option selected>Choose...</option>
+                            <option selected value="<%= el.priority %>">
+                                <% if (el.priority == 1) { %>
+                                    Low
+                                <% } else if (el.priority == 2) { %>
+                                    Normal
+                                <% } else if (el.priority == 3) { %>
+                                    Important
+                                <% } else if (el.priority == 4) { %>
+                                    Critical
+                                <% } %>
+                            </option>
                             <option value="1">Low</option>
                             <option value="2">Normal</option>
                             <option value="3">Important</option>

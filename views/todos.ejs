@@ -27,7 +27,8 @@
                     <span class="fas fa-edit"></span>
                 </a>
 
-                <span class='del'> Delete </span>
+                <!-- Changed <span class='del'> Delete </span> to an icon: -->
+                <span class="del"><i class="fas fa-trash"></i></span>
             </li>
     <% }) %>    
     </ul>
@@ -36,7 +37,7 @@
 
     <form action="/todos/createTodo" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='todoItem'>
-        
+
         <label class="" for="inputGroupSelect01">Priority</label>
         <select name="priority" class="form-select" id="inputGroupSelect01">
             <option selected>Choose...</option>

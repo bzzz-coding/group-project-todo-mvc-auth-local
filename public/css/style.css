@@ -1,10 +1,27 @@
 h1{
-    color: red;
+    color: goldenrod;
 }
 .completed{
     text-decoration: line-through;
     color: gray;
 }
-.not{
-    text-decoration: underline;
+
+li {
+    list-style-type: none;
 }
+
+/* .not{
+    text-decoration: underline;
+} */
+
+
+body {
+    background: #E8EBF3;
+    padding: 5% 30%;
+    /* height: 100vh; */
+    font: 400 16px 'Varela Round', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
