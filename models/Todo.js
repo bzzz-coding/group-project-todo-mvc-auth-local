@@ -16,7 +16,7 @@ const TodoSchema = new mongoose.Schema({
   },
   priority: {
     type: String,
-    default: '1'
+    default: '0'
   },
   // ---- new
   userId: {

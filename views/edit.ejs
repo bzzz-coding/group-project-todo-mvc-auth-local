@@ -39,6 +39,8 @@
                                     Important
                                 <% } else if (el.priority == 4) { %>
                                     Critical
+                                <% } else if (el.priority == 0) { %>
+                                    Choose...
                                 <% } %>
                             </option>
                             <option value="1">Low</option>
@@ -69,7 +71,9 @@
                         <a href='/todos/edit/<%= el._id %>' class="edit">
                             <span class="fas fa-edit"></span>
                         </a>
-                        <span class='del'> Delete </span>
+
+                        <!-- Changed <span class='del'> Delete </span> to an icon: -->
+                        <span class="del"><i class="fas fa-trash"></i></span>
                     </li>
                 <% } %>
         <% }) %>
@@ -80,7 +84,7 @@
     </h2>
 
     <select name="priority" class="form-select" id="inputGroupSelect01">
-        <option selected>Choose...</option>
+        <option selected value="0">Choose...</option>
         <option value="1">Low</option>
         <option value="2">Normal</option>
         <option value="3">Important</option>
