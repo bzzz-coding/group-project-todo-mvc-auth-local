@@ -17,6 +17,8 @@
             <div class="alert alert-danger"><%= el.msg %></div>
         <% }) %>    
     <% } %>
+
+    <!-- the method specifies that this is a post request at '/login' path(route) -->
     <form action="/login" method="POST">
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">

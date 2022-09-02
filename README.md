@@ -12,6 +12,14 @@ A Simple ToDo App is built using the MVC Architecture, we have also implemented 
 
 - It's a beginner level app created to understand how MVC concept and logins are added
 
+🌟 User can register and log in to view, create, edit and delete their own todo list
+
+🌟 User can choose the priority for each todo item
+
+🌟 After completing a task, user can choose to mark an item 'completed', or delete the item
+
+🌟 Todo list is sorted by status (not compeleted -> completed), priority, and date/time of input
+
 ---
 
 # Who is this for? 

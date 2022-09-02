@@ -10,6 +10,9 @@ const UserSchema = new mongoose.Schema({
 
 // Password hash middleware.
  
+
+// UserSchema.pre('save', async function(next){ if(this.isModified('password')) this.password = await bcrypt.hash(this.password, 10) next() })
+
  UserSchema.pre('save', function save(next) {
   const user = this
   if (!user.isModified('password')) { return next() }

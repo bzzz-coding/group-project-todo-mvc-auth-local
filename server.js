@@ -22,7 +22,10 @@ app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 app.use(logger('dev'))
-// Sessions
+
+
+// Sessions middleware
+// Set up a user session that makes sure that the user remain logged in
 app.use(
     session({
       secret: 'keyboard cat',
@@ -37,9 +40,10 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 app.use(flash())
-  
+
 app.use('/', mainRoutes)
 app.use('/todos', todoRoutes)
+
  
 app.listen(process.env.PORT, ()=>{
     console.log('Server is running, you better catch it!')
