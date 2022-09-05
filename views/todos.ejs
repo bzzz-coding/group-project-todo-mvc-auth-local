@@ -19,12 +19,12 @@
     <nav>
       <div class="navbar">
         <div class="container nav-container">
-            <input class="checkbox" type="checkbox"/>
-            <div class="hamburger-lines">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
-            </div>  
+          <input class="checkbox" type="checkbox" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
           <div class="logo">
             <h1>Daily Tasks</h1>
           </div>
@@ -34,7 +34,7 @@
             <li><a href="/logout">Log Out</a></li>
             <!-- <li><a href="#">About</a></li>
             <li><a href="#">100Devs</a></li> -->
-            
+
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
   </header>
 
 
-  <h1>Todos</h1>
+  <h1>Tasks</h1>
   <ul>
     <% todos.forEach( el=> { %>
       <li class='todoItem' data-id='<%= el._id %>'>
@@ -65,7 +65,7 @@
   </ul>
 
   <h2>
-    <%= user.userName %> has <%= left %> things left to do.
+    <%= user.userName %> has <%= left %> tasks left to do.
   </h2>
 
   <!-- <form action="/todos/createTodo" method='POST'>
@@ -87,47 +87,32 @@
 
   <h5>code below should be styled form</h5>
 
-  <div class="newTaskItem">
+  <!-- <div class="newTaskItem"> -->
     <!-- new todo -->
-    <div class="addContainer">
+    <!-- <div class="outer-container addContainer"> -->
       <!-- check -->
-      <div class="newTask">
+      <!-- <div class="newTask"> -->
         <!-- new todo input -->
-
         <form action="/todos/createTodo" method='POST'>
+          <input class="form-item" type="text" placeholder="New Task" name='todoItem' />
 
-          <input type="text" placeholder="New Task" name='todoItem' />
+          <div class="dropdown-group form-item">
+            <label class="" for="inputGroupSelect01">Priority</label>
+            <select name="priority" class="form-select" id="inputGroupSelect01">
+              <option selected value="0">Choose...</option>
+              <option value="1">Low</option>
+              <option value="2">Normal</option>
+              <option value="3">Important</option>
+              <option value="4">Critical</option>
+            </select>
+          </div>
 
-          <label class="" for="inputGroupSelect01">Priority</label>
-          <select name="priority" class="form-select" id="inputGroupSelect01">
-            <option selected value="0">Choose...</option>
-            <option value="1">Low</option>
-            <option value="2">Normal</option>
-            <option value="3">Important</option>
-            <option value="4">Critical</option>
-          </select>
-          <input type="submit" value="+ Add Task" class="addBtn"><!-- check mark -->
-          </button>
+          <button class="addBtn form-item" type="submit">+ Add Task</button>
         </form>
-      </div>
-    </div>
-  </div>
-  <!-- <div class="toDOItemsWrap">
-        <div class="toDoItems">
-        </div>
-        <div class="toDoItemsInfo">
-        </div>
-        <div class="todoItem">
-          <div class="check">
-            <div class="checkMark">
-              <i class="fa-regular fa-circle-check"></i>
-            </div>
-          </div>
-          <div class="todoText">
-            something
-          </div>
-        </div>
-      </div> -->
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+
 
   <script src="js/main.js"></script>
 </body>
