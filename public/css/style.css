@@ -10,9 +10,9 @@ h1{
 }
 } */
 
-.completed{
-    text-decoration: line-through;
-    color: #e75a5a;
+.completed {
+  text-decoration: line-through;
+  color: #e75a5a;
 }
 
 
@@ -207,7 +207,8 @@ form {
 }
 
 
-.form-item, select {
+.form-item,
+select {
   width: 100%;
   padding: 10px;
   background-color: #222222;
@@ -229,7 +230,7 @@ form {
 } */
 
 /*placeholder colour and font*/
-input::placeholder {
+input::placeholder{
   color: #ffffffa9;
   /* font-family: 'Ropa Sans', sans-serif; */
 }
@@ -241,7 +242,7 @@ input::placeholder {
   background-color: #84DCC6;
   padding: 10px;
   /* display: flex;
-  justify-content: center; */ 
+  justify-content: center; */
   /* font-size: 2rem; */
   cursor: pointer;
   transition: all 0.25s;
@@ -252,4 +253,26 @@ input::placeholder {
 .addBtn:hover {
   color: #FFFFFF;
   background-color: #e75a5a;
+}
+
+.confirm-cancel-btn-group {
+  display: flex;
+  align-items: center;
+}
+
+.confirm-cancel-btn-group * {
+  flex-grow: 1;
+  margin: 1%;
+}
+
+.confirmBtn {
+  border: 2px solid white;
+  background-color: #222222;
+  color: white;
+}
+
+.cancelBtn {
+  border: 2px solid white;
+  background-color: white;
+  color: #222222;
 }
