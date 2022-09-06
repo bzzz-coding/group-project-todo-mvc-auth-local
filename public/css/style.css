@@ -232,8 +232,12 @@ form {
 /*placeholder colour and font*/
 input::placeholder {
   color: #ffffffa9;
+  padding: 10px;
   /* font-family: 'Ropa Sans', sans-serif; */
 }
+
+
+
 
 .form-item {
   width: 100%;
@@ -264,7 +268,7 @@ input::placeholder {
 }
 
 .form-select,
-.addBtn {
+.add-btn {
   width: 40%;
 }
 
@@ -280,10 +284,7 @@ input::placeholder {
 
 
 /*add button */
-.addBtn {
-  color: #222222;
-  /* background-color: #222222; */
-  background-color: #84DCC6;
+.btn {
   padding: 10px;
   /* display: flex;
   justify-content: center; */
@@ -294,10 +295,25 @@ input::placeholder {
 }
 
 /*hover over add button colour*/
-.addBtn:hover {
+.btn:hover {
   color: #FFFFFF;
   background-color: #e75a5a;
 }
+
+.add-btn, .confirm-btn {
+  color: #222222;
+  /* background-color: #222222; */
+  background-color: #84DCC6;
+}
+
+.cancel-btn {
+  color: #84DCC6;
+  /* background-color: #222222; */
+  background-color: #222222;
+  border: 1px solid #84DCC6;
+}
+
+
 
 .confirm-cancel-btn-group {
   display: flex;

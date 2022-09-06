@@ -46,20 +46,19 @@
         <input class="form-item" type="text" placeholder="New Task" name='todoItem' />
 
         <div class="dropdown-group form-item">
-          <label class="" for="inputGroupSelect01">Priority</label>
-          <select name="priority" class="form-select" id="inputGroupSelect01">
+          <label class="form-item form-label" for="inputGroupSelect01">Priority</label>
+          <select name="priority" class="form-item form-select" id="inputGroupSelect01">
             <option selected value="0">Choose...</option>
             <option value="1">Low</option>
             <option value="2">Normal</option>
             <option value="3">Important</option>
             <option value="4">Critical</option>
           </select>
+          <button class="btn add-btn form-item" type="submit">+ Add Task</button>
         </div>
-
-        <button class="addBtn form-item" type="submit">+ Add Task</button>
       </form>
 
-    <h1>Todos</h1>
+    <h1>Tasks</h1>
     <ul>
         <% todos.forEach( el=> { %>
             <% if (el._id==idOfItem) { %>
@@ -74,8 +73,8 @@
                                     name="todoItem">
                                 <% } %>
                                     <div class="form-item dropdown-group">
-                                        <label class="" for="inputGroupSelect01">Priority</label>
-                                        <select name="priority" class="form-select" id="inputGroupSelect01">
+                                        <label class="form-item form-label" for="inputGroupSelect01">Priority</label>
+                                        <select name="priority" class="form-item form-select" id="inputGroupSelect01">
                                             <option selected value="<%= el.priority %>">
                                                 <% if (el.priority==1) { %>
                                                     Low
@@ -98,11 +97,11 @@
 
                                     <div class="confirm-cancel-btn-group form-item">
                                         <!-- confirm is a submit button for POST -->
-                                        <button class="confirmBtn" type="submit"
+                                        <button class="form-item btn confirm-btn" type="submit"
                                             class="confirm">Confirm</button>
 
                                         <!-- cancel gets routed to '/todos' -->
-                                        <button class="cancelBtn" href="/todos" class="cancel">Cancel</button>
+                                        <button class="form-item btn cancel-btn" href="/todos" class="cancel">Cancel</button>
                                     </div>
 
                     </form>
