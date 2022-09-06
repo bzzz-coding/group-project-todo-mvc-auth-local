@@ -10,7 +10,7 @@ h1{
 } */
 
 p {
-  margin: 5% auto;
+  margin: 3% auto;
   padding: 1% 15%;
   width: 70%;
 }
@@ -33,6 +33,20 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.credits {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.credits a {
+  color: #84DCC6;
+}
+
+.credits a:hover {
+  color:#e75a5a;
 }
 
 .completed {
