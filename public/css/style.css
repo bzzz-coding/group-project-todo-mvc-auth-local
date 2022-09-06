@@ -9,6 +9,12 @@ h1{
 }
 } */
 
+h2 {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin: 3% auto;
+}
+
 a {
   text-decoration: none;
 }
@@ -342,7 +348,7 @@ input::placeholder {
 
 
 /*icon and todo item textbox container*/
-.todoItem{
+.todoItem {
   display: flex;
   height: 70px;
   border-bottom: #4B4E6D;
@@ -351,7 +357,6 @@ input::placeholder {
   font-family: 'Ropa Sans', sans-serif;
   justify-content: center;
   box-shadow: 0px 2px 30px 0px #222222;
-
 }
 
 /* ======== task items ========= */
@@ -381,7 +386,6 @@ input::placeholder {
   padding-top: 20px;
   display: flex;
   justify-content: center;
-  
 }
 
 .stars, .edit, .del {

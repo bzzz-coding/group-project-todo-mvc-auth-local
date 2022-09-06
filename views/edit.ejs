@@ -42,23 +42,24 @@
         </nav>
     </header>
 
-    <form action="/todos/createTodo" method='POST'>
+    <!-- <form action="/todos/createTodo" method='POST'>
         <input class="form-item" type="text" placeholder="New Task" name='todoItem' />
 
         <div class="dropdown-group form-item">
-          <label class="form-item form-label" for="inputGroupSelect01">Priority</label>
-          <select name="priority" class="form-item form-select" id="inputGroupSelect01">
-            <option selected value="0">Choose...</option>
-            <option value="1">Low</option>
-            <option value="2">Normal</option>
-            <option value="3">Important</option>
-            <option value="4">Critical</option>
-          </select>
-          <button class="btn add-btn form-item" type="submit">+ Add Task</button>
+            <label class="form-item form-label" for="inputGroupSelect01">Priority</label>
+            <select name="priority" class="form-item form-select" id="inputGroupSelect01">
+                <option selected value="0">Choose...</option>
+                <option value="1">Low</option>
+                <option value="2">Normal</option>
+                <option value="3">Important</option>
+                <option value="4">Critical</option>
+            </select>
+            <button class="btn add-btn form-item" type="submit">+ Add Task</button>
         </div>
-      </form>
+    </form> -->
 
-    <h1>Tasks</h1>
+    <h2>Editing Task</h2>
+
     <ul>
         <% todos.forEach( el=> { %>
             <% if (el._id==idOfItem) { %>
@@ -101,37 +102,16 @@
                                             class="confirm">Confirm</button>
 
                                         <!-- cancel gets routed to '/todos' -->
-                                        <button class="form-item btn cancel-btn" href="/todos" class="cancel">Cancel</button>
+                                        <button class="form-item btn cancel-btn" href="/todos"
+                                            class="cancel">Cancel</button>
                                     </div>
 
                     </form>
                 </li>
-                <% } else { %>
-                    <li class='todoItem' data-id='<%= el._id %>'>
-                        <span class='<%= el.completed === true ? ' completed' : 'not' %>'><%= el.todo %></span>
-
-
-                        <!-- add stars for priority -->
-                        <% for (let i=0; i < Number(el.priority); i++) { %>
-                            <i class="fas fa-star"></i>
-                            <% } %>
-
-
-                                <!-- client side js event listener -->
-                                <a href='/todos/edit/<%= el._id %>' class="edit">
-                                    <span class="fas fa-edit"></span>
-                                </a>
-
-                                <!-- Changed <span class='del'> Delete </span> to an icon: -->
-                                <span class="del"><i class="fas fa-trash"></i></span>
-                    </li>
-                    <% } %>
-                        <% }) %>
+            <% }}) %>
+        
     </ul>
 
-    <h2>
-        <%= user.userName %> has <%= left %> Tasks left to do.
-    </h2>
 
 
 
