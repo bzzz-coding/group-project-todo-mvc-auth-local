@@ -42,6 +42,23 @@
         </nav>
     </header>
 
+    <form action="/todos/createTodo" method='POST'>
+        <input class="form-item" type="text" placeholder="New Task" name='todoItem' />
+
+        <div class="dropdown-group form-item">
+          <label class="" for="inputGroupSelect01">Priority</label>
+          <select name="priority" class="form-select" id="inputGroupSelect01">
+            <option selected value="0">Choose...</option>
+            <option value="1">Low</option>
+            <option value="2">Normal</option>
+            <option value="3">Important</option>
+            <option value="4">Critical</option>
+          </select>
+        </div>
+
+        <button class="addBtn form-item" type="submit">+ Add Task</button>
+      </form>
+
     <h1>Todos</h1>
     <ul>
         <% todos.forEach( el=> { %>
@@ -117,24 +134,9 @@
         <%= user.userName %> has <%= left %> Tasks left to do.
     </h2>
 
-    <form action="/todos/createTodo" method='POST'>
-        <input class="form-item" type="text" placeholder="New Task" name='todoItem' />
 
-        <div class="dropdown-group form-item">
-          <label class="" for="inputGroupSelect01">Priority</label>
-          <select name="priority" class="form-select" id="inputGroupSelect01">
-            <option selected value="0">Choose...</option>
-            <option value="1">Low</option>
-            <option value="2">Normal</option>
-            <option value="3">Important</option>
-            <option value="4">Critical</option>
-          </select>
-        </div>
 
-        <button class="addBtn form-item" type="submit">+ Add Task</button>
-      </form>
-
-    <a href="/logout">Logout</a>
+    <!-- <a href="/logout">Logout</a> -->
 
     <script src="/js/main.js"></script>
 </body>

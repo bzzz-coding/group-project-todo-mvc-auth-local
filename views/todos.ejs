@@ -41,6 +41,32 @@
     </nav>
   </header>
 
+<!-- <div class="newTaskItem"> -->
+    <!-- new todo -->
+    <!-- <div class="outer-container addContainer"> -->
+      <!-- check -->
+      <!-- <div class="newTask"> -->
+        <!-- new todo input -->
+        <form action="/todos/createTodo" method='POST'>
+          <input class="form-item new-task" type="text" placeholder="New Task" name='todoItem' />
+
+          <div class="dropdown-group form-item">
+            <label class="form-label" for="inputGroupSelect01">Priority</label>
+            <select name="priority" class="form-item form-select" id="inputGroupSelect01">
+              <option selected value="0">Choose...</option>
+              <option value="1">Low</option>
+              <option value="2">Normal</option>
+              <option value="3">Important</option>
+              <option value="4">Critical</option>
+            </select>
+            <button class="addBtn form-item" type="submit">+ Add Task</button>
+          </div>
+
+          <!-- <button class="addBtn form-item" type="submit">+ Add Task</button> -->
+        </form>
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
 
   <h1>Tasks</h1>
   <ul>
@@ -87,31 +113,7 @@
 
   <h5>code below should be styled form</h5>
 
-  <!-- <div class="newTaskItem"> -->
-    <!-- new todo -->
-    <!-- <div class="outer-container addContainer"> -->
-      <!-- check -->
-      <!-- <div class="newTask"> -->
-        <!-- new todo input -->
-        <form action="/todos/createTodo" method='POST'>
-          <input class="form-item" type="text" placeholder="New Task" name='todoItem' />
-
-          <div class="dropdown-group form-item">
-            <label class="" for="inputGroupSelect01">Priority</label>
-            <select name="priority" class="form-select" id="inputGroupSelect01">
-              <option selected value="0">Choose...</option>
-              <option value="1">Low</option>
-              <option value="2">Normal</option>
-              <option value="3">Important</option>
-              <option value="4">Critical</option>
-            </select>
-          </div>
-
-          <button class="addBtn form-item" type="submit">+ Add Task</button>
-        </form>
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
+  
 
 
   <script src="js/main.js"></script>

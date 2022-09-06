@@ -4,7 +4,6 @@ h1{
     background-color: black;
     padding: 0%;
     text-align: center;
-
 .not{
     text-decoration: underline;
 }
@@ -28,6 +27,8 @@ body {
   text-align: center;
 }
 
+
+/* ======== nav bar ======= */
 .container {
   margin: auto;
   max-width: 1050px;
@@ -170,13 +171,14 @@ body {
   display: none;
 }
 
+
+
 /* the divs below do not seem to do anything to styles thus commented out*/
 /* .newTaskItem {
   background-color: #4B4E6D;
   height: 50px;
   margin-top: 25px;
 }
-
 .addContainer {
   background-color: #4B4E6D;
   height: 50px;
@@ -184,12 +186,10 @@ body {
   width: 50%;
   margin: 25px auto auto 0;
 }
-
 .addContainer {
   display: flex;
   justify-content: center;
 }
-
 .newTask {
   flex-grow: 0.10;
   display: flex;
@@ -200,21 +200,48 @@ body {
 /* doesn't seem to need a .newTask div wrapping the form thus selecting form directly: */
 form {
   display: inline-block;
-  width: 50%;
   background-color: #4B4E6D;
-  height: 50px;
+  height: 10%;
   margin-top: 25px;
 }
 
+@media (min-width: 1025px) {
+  form {
+    width: 40%;
+  }
+}
 
-.form-item,
-select {
+@media (min-width: 769px) and (max-width: 1024px) {
+  form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480) {
+  form {
+    width: 100%;
+  }
+}
+
+/*placeholder colour and font*/
+input::placeholder {
+  color: #ffffffa9;
+  /* font-family: 'Ropa Sans', sans-serif; */
+}
+
+.form-item {
   width: 100%;
   padding: 10px;
   background-color: #222222;
   border: none;
   /* outline: none; */
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   font-family: 'Ropa Sans', sans-serif;
 }
@@ -223,17 +250,34 @@ select {
 .dropdown-group {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
+
+.form-label,
+.form-select {
+  margin-right: 5%;
+}
+
+.form-label {
+  text-align: left;
+  width: 20%;
+}
+
+.form-select,
+.addBtn {
+  width: 40%;
+}
+
+.form-select {
+  background-color: #4B4E6D;
+  border-radius: 5px;
+}
+
 
 /* .newTask form {
   flex-grow: 1;
 } */
 
-/*placeholder colour and font*/
-input::placeholder{
-  color: #ffffffa9;
-  /* font-family: 'Ropa Sans', sans-serif; */
-}
 
 /*add button */
 .addBtn {
